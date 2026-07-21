@@ -38,7 +38,9 @@ export function TagsInput({
       addTag(input);
     }
     if (e.key === "Backspace" && !input && tags.length > 0) {
-      removeTag(tags[tags.length - 1]);
+      const lastTag = tags[tags.length - 1];
+      if (lastTag) removeTag(lastTag);
+    }
     }
   }
 
