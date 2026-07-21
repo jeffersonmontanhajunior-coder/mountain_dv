@@ -38,11 +38,12 @@ export function TagsInput({
       addTag(input);
     }
     if (e.key === "Backspace" && !input && tags.length > 0) {
-      const lastTag = tags[tags.length - 1];
-      if (lastTag) removeTag(lastTag);
-    }
-    }
+  const lastTag = tags[tags.length - 1];
+  if (lastTag) {
+    removeTag(lastTag);
   }
+    }
+    }
 
   return (
     <div className="flex flex-col gap-2">
