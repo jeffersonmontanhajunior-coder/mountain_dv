@@ -39,6 +39,7 @@ export function TagsInput({
     }
     if (e.key === "Backspace" && !input && tags.length > 0) {
   const lastTag = tags[tags.length - 1];
+      if (lastTag) removeTag(lastTag);
   if (lastTag) {
     removeTag(lastTag);
   }
