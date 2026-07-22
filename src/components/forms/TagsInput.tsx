@@ -3,8 +3,6 @@
 import { useState, type KeyboardEvent } from "react";
 import { X } from "lucide-react";
 
-// "Adicionar/remover tags dinamicamente" — Enter ou vírgula adiciona,
-// Backspace num campo vazio remove a última tag.
 export function TagsInput({
   label,
   defaultTags = [],
@@ -38,13 +36,10 @@ export function TagsInput({
       addTag(input);
     }
     if (e.key === "Backspace" && !input && tags.length > 0) {
-  const lastTag = tags[tags.length - 1];
+      const lastTag = tags[tags.length - 1];
       if (lastTag) removeTag(lastTag);
-  if (lastTag) {
-    removeTag(lastTag);
+    }
   }
-    }
-    }
 
   return (
     <div className="flex flex-col gap-2">
